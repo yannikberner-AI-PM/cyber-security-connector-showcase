@@ -7,7 +7,7 @@ Diese Einordnung beruht auf statischer Inspektion des privaten Lotse-Quellstands
 | Aussage | Einordnung | Relativer Quellbeleg | Einschränkung |
 | --- | --- | --- | --- |
 | Projektname Lotse | Quelle identifiziert | `README.md` | Showcase ist nicht das vollständige Produkt. |
-| KMU-Onboarding und Dashboard | UI-Code vorhanden | `apps/kmu-demo/src/app/onboarding/page.tsx`; `apps/kmu-demo/src/app/dashboard/page.tsx` | Keine aktuelle Browserausführung in dieser Vorbereitung. |
+| KMU-Onboarding und Dashboard | UI-Code vorhanden | `apps/kmu-demo/src/app/onboarding/page.tsx`; `apps/kmu-demo/src/app/dashboard/page.tsx` | Isolierte synthetische KMU-Demo ausgeführt; siehe SCREENSHOTS.md. Kein Live-/Deploymentnachweis. |
 | Multi-Source-Maßnahmen | Regelcode vorhanden | `packages/core-connector/src/measures/multi-source-generator.ts` | HR-Zuordnung und QM-Schlüsselwörter sind Heuristiken; keine fachliche Bestätigung. |
 | Personio | Demo | `packages/core-connector/src/connectors/personio.ts` | `pull` liefert den eingebauten Datensatz; Kommentar suggeriert mehr als der untersuchte Code realisiert. Keine bestätigte Live-API. |
 | HubSpot | Demo | `packages/core-connector/src/connectors/hubspot.ts` | Live-Pull wirft einen Fehler. Demo-Firmen nicht übernommen. |

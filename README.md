@@ -1,4 +1,4 @@
-# Cyber Security Connector — Forschungs-Showcase
+# Cyber Security Connector: Forschungs-Showcase
 
 **Vorhandene HR-, Qualitäts- und Onboarding-Daten in nachvollziehbare Maßnahmen, Aufgaben und Nachweise übersetzen.**
 
@@ -26,13 +26,37 @@ Der Nutzen liegt nicht im automatischen Bescheinigen von Sicherheit, sondern im 
 
 **Menschliche Freigabe ist eine Produktanforderung, noch kein durchgängig erzwungenes Sicherheitsmerkmal.** Positive Wirksamkeitsbestätigungen, Risikoakzeptanzen, Rechtsentscheidungen und der fachliche Abschluss einer Maßnahme müssen bei berechtigten Menschen bleiben. Die aktuelle Demo und die gezeigten Exportfunktionen erzwingen diese Grenze nicht vollständig.
 
+## So sieht die Arbeitsstrecke aus
+
+Drei echte Browseraufnahmen der lokal gestarteten KMU-App, keine Mockups. **Alle Daten sind synthetisch; Personio und Jira sind simuliert.** Die isolierte Kopie erhält einen sichtbaren Demo-Hinweis und präzisierte Vorschlags-/Ticketlabels. Es gibt keine durchgängig erzwungene Fachfreigabe und keine geprüfte Nachweisablage.
+
+### 1. Datenquellen statt Doppelpflege
+
+![Onboarding mit synthetischem Personio-Datensatz und optionalen Datenquellen](docs/screenshots/01-onboarding.png)
+
+Das Onboarding erfasst Branche und Größe. Hier hat der simulierte Personio-Adapter 13 synthetische Personen-/Abteilungseinträge eingelesen. Weitere Marketplace-Karten sind keine bestätigten Integrationen.
+
+### 2. Maßnahmen zur fachlichen Prüfung vorbereiten
+
+![13 regelbasierte Maßnahmenvorschläge mit synthetischen Verantwortlichen](docs/screenshots/02-massnahmen.png)
+
+Aus Onboarding, HR und fünf CSV-Beispielprozessen entstehen 13 Vorschläge mit Priorität, möglichen Verantwortlichen und Prozesshinweisen. „Bereits vorhandener Prozess erkannt“ bedeutet einen heuristischen Treffer, nicht Wirksamkeit oder Compliance. Die Namen gehören zum eingebauten Demo-Datensatz.
+
+### 3. Aufgaben verfolgen, Nachweisgrenze sichtbar halten
+
+![Simulierte Jira-Aufgaben mit einem Statuswechsel und Hinweis auf fehlende Nachweisablage](docs/screenshots/03-aufgaben-nachweisgrenze.png)
+
+Die tatsächlichen lokalen Demo-API-Routen erzeugen simulierte Ticketreferenzen. Ein Klick auf Sync setzt eine Aufgabe auf „In Arbeit“. Die angezeigten 4 % sind nur die Statusformel, kein Sicherheitsgrad. **Eine Nachweis-/Evidence-Oberfläche ist in diesem KMU-Dashboard nicht implementiert**; deshalb zeigt das dritte Bild Aufgaben und die explizite Nachweisgrenze statt einer erfundenen Evidence-Ansicht.
+
+[Aufnahme, Isolation, Anpassungen und Grenzen](docs/SCREENSHOTS.md) · [Maschinenlesbarer Laufbeleg](docs/screenshots/capture-report.json)
+
 ## Was ist vorhanden, was ist geplant?
 
-„Vorhanden“ bedeutet hier: im privaten Quellcode durch statische Inspektion identifiziert. Nur der kleine öffentliche Codeauszug wurde in diesem Showcase ausgeführt. Frühere Test- oder Auditangaben des privaten README werden nicht als aktuelle Ergebnisse übernommen.
+„Vorhanden“ bedeutet hier: im privaten Quellcode durch statische Inspektion identifiziert. Der öffentliche Codeauszug und eine isolierte lokale App-Demo mit synthetischen Daten wurden ausgeführt. Frühere Test- oder Auditangaben des privaten README werden nicht als aktuelle Ergebnisse übernommen.
 
 | Bereich | Ehrliche Einordnung |
 | --- | --- |
-| KMU- und Partneroberfläche | Next.js-/React-Demos mit Onboarding, Marketplace und Dashboard vorhanden; kein hier ausgeführter Browser- oder Deploymentnachweis. |
+| KMU- und Partneroberfläche | Next.js-/React-Demos vorhanden; KMU-Onboarding, Maßnahmen und simulierte Tickets lokal im Browser ausgeführt. Kein Deploymentnachweis. |
 | Maßnahmen aus mehreren Quellen | Regelbasierter Generator vorhanden: Onboarding erzeugt den Basisplan, HR ergänzt Owner-Vorschläge, QM ergänzt Prozesshinweise. Heuristiken ersetzen keine fachliche Prüfung. |
 | HR / Personio | Demo-Adapter liefert einen fest eingebauten Datensatz. Der untersuchte `pull`-Pfad ruft keine Personio-Live-API auf. |
 | QM / Prozessimport | Einfacher, semikolongetrennter CSV-Parser vorhanden. Kein vollständiger CSV-Standardparser, kein nativer XLSX-Import und kein Nachweis einer QM-Herstellerintegration. |
@@ -71,4 +95,4 @@ Keine automatische NIS-2-/BSIG-Konformität, ISO-Zertifizierung, Rechtsberatung,
 
 ## Rechte und Veröffentlichungsgrenze
 
-Texte und ausgewählte Originalauszüge bleiben **proprietär**; siehe [LICENSE](LICENSE). Öffentlich einsehbar bedeutet nicht Open Source. Dieses eigenständige Repository enthält keine private Git-Historie, Betriebs- oder Zugangskonfiguration, Kundendaten, internen Marktstudien oder fremden Normtexte. Bilder und Datenbestände aus der privaten Demo werden bewusst nicht übernommen.
+Texte und ausgewählte Originalauszüge bleiben **proprietär**; siehe [LICENSE](LICENSE). Öffentlich einsehbar bedeutet nicht Open Source. Dieses eigenständige Repository enthält keine private Git-Historie, Betriebs- oder Zugangskonfiguration, Kundendaten, internen Marktstudien oder fremden Normtexte. Die drei neu aufgenommenen App-Bilder zeigen ausschließlich den eingebauten synthetischen HR-/QM-Datensatz und simulierte Tickets. Keine Bestandsdaten, Zugangsdaten oder privaten Betriebsdateien werden übernommen.

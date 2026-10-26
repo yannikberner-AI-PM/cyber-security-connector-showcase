@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_root": "../Cyber-Security-SaaS",
-  "source_identity": "Lotse (private research prototype; statically inspected)",
+  "source_identity": "Lotse (private research prototype; statically inspected and isolated synthetic KMU demo exercised)",
   "public_scope": "Curated independent showcase; no private Git history or operating configuration.",
   "copied_files": [
     {
@@ -109,5 +109,72 @@
       "sha256": "fbce1f49972c91a60dba160c266abd6d9654bf6e88c609652b0a254b05abdc4e"
     }
   ],
-  "new_materials": "Showcase documentation, license notice, package metadata and synthetic characterization tests were newly authored; not copied from private operational documentation."
+  "new_materials": "Showcase documentation, license notice, package metadata and synthetic characterization tests were newly authored; not copied from private operational documentation.",
+  "capture": {
+    "data_classification": "synthetic",
+    "live_integrations": false,
+    "evidence_storage": false,
+    "browser_session": "cyber-screens",
+    "date": "2026-10-26",
+    "runtime": "Next.js 16.4.3, React 19.3.0, Playwright Chromium 1.64.0",
+    "source_modifications": [
+      {
+        "source": "apps/b2b2b-demo/package.json",
+        "original_sha256": "c4a9f3a92d1ec88da67b3cfaaf9741721e6558438413b87f853b4f11455617a1",
+        "capture_sha256": "9517170c1f033d99b9e160a97c32909dd685aa32d5cca09b20ce15566108440f"
+      },
+      {
+        "source": "apps/kmu-demo/package.json",
+        "original_sha256": "eb9f190bf6f85b672cb8b427068f1b9a5177a70b50fe560159386d87793112b6",
+        "capture_sha256": "af73839c1811162015fe06e22cd92d7f78c1e540d2bc3f2dd68f3d3f4f66f534"
+      },
+      {
+        "source": "apps/kmu-demo/src/app/dashboard/page.tsx",
+        "original_sha256": "eaf890e428247eb16b12e00b03b9b2bebe6d006e3cc662656caeec7a9ead4c8c",
+        "capture_sha256": "9d3fc6ad5662cbb61c23b67b07ebb8a54bc1b8e810914a4b3642d0dda61a7c6f"
+      },
+      {
+        "source": "apps/kmu-demo/src/app/layout.tsx",
+        "original_sha256": "d05def77e73637588a4a7576b654ed8afc1aa6c3e4b16acf475686f6359739d9",
+        "capture_sha256": "ceebd119537a0022f35fcb71326e5557eb4bae1f7be3857abc81b5245efd2cbc"
+      },
+      {
+        "source": "package-lock.json",
+        "original_sha256": "30161578bdbf72ac328071667858909713e831e04316f7b4aa9ff2f5456759ca",
+        "capture_sha256": "3dce61507c81d5d494ec23980b2ef20fe258f659bcb25a505f124990cc3c12fd"
+      },
+      {
+        "source": "tests/e2e/prototype-smoke.spec.ts",
+        "original_sha256": "f5c0f6aad6cdc61851554b6f880db2e8a178e38e51c57cbf4d5de76f791361eb",
+        "capture_sha256": "08721a7db4b386cb6de40155e964d4fd5c8f9180d0a879a7382324364cefd637"
+      }
+    ],
+    "adjustments": [
+      "Next 16.4.0 to 16.4.3 in isolated copy after audit finding; private source untouched",
+      "Demo banner in KMU layout; precise proposal/ticket labels and evidence-limit note in dashboard",
+      "Smoke test heading selector updated for precise proposal label; no domain logic modified"
+    ],
+    "flow_script_sha256": "95eb7f4297fa45c80c18f736b9bd44ef8c35ebd7ba3190bc2168acb2fde05ae7",
+    "source_files_unchanged": true
+  },
+  "screenshots": [
+    {
+      "path": "docs/screenshots/01-onboarding.png",
+      "sha256": "f70e30e367346ea08453b0db9b9dd6faf66c89fb9b8324a0573103a9b6d5eecd",
+      "kind": "actual_app_browser_capture",
+      "synthetic": true
+    },
+    {
+      "path": "docs/screenshots/02-massnahmen.png",
+      "sha256": "42f018d61ec79519b3b850fe011e1f5b461dc8a3c06ed114c8c44181b505c834",
+      "kind": "actual_app_browser_capture",
+      "synthetic": true
+    },
+    {
+      "path": "docs/screenshots/03-aufgaben-nachweisgrenze.png",
+      "sha256": "e88914c84c2c6cb692805d9cc92b825dbc345d860b04ed4260f401895325f81c",
+      "kind": "actual_app_browser_capture",
+      "synthetic": true
+    }
+  ]
 }

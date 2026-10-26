@@ -1,67 +1,38 @@
-# Lokale Verifikation
+# Verifikation und Aussagegrenzen
 
-## Tatsächlich ausgeführt
+## Öffentlicher Showcase
 
-Umgebung dieses Laufs: Node.js **v26.7.0**, npm **11.19.0**. Kein Paketdownload, keine externen APIs, kein Browser-/Deploymenttest und keine Veränderung des privaten Projekts waren Teil des Laufs.
-
-### Öffentlicher Auszug
+Mit Node.js v26.7.0 und npm 11.19.0 ausgeführt:
 
 ```bash
 npm test
-```
-
-Der Node-Test-Runner meldete:
-
-```text
-tests 8
-suites 0
-pass 8
-fail 0
-cancelled 0
-skipped 0
-todo 0
-```
-
-Bestandene Testfälle:
-
-1. Export erhält Herkunft, Verantwortliche und Zielprojekt.
-2. Alle vier Prioritäten werden in Exportlabels abgebildet.
-3. Fehlende optionale Felder und leere Referenzen bleiben erlaubt.
-4. Batchexport erhält Reihenfolge ohne die Eingabe zu verändern.
-5. Leere Eingabe erzeugt weder Tickets noch Fortschritt.
-6. Fortschritt zählt Status und gewichtet `in_progress` zur Hälfte.
-7. Bekannte Grenze: `done` wird ohne Nachweis- oder Freigabeprüfung gezählt.
-8. Exportziel ist ein Datenfeld, keine bestätigte Live-Integration.
-
-Die Tests wurden zuerst vor Übernahme des Auszugs aufgerufen und scheiterten erwartbar am fehlenden Modul. Nach bytegleicher Übernahme bestanden alle acht Fälle. Es wurde keine Produktlogik neu implementiert oder für Tests verändert.
-
-### Zusätzliche lokale Typprüfung
-
-Mit dem bereits vorhandenen TypeScript-Compiler des privaten Schwesterprojekts, ohne Installation oder Ausgabe-Dateien:
-
-```bash
-node ../Cyber-Security-SaaS/node_modules/typescript/bin/tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler components/src/actions/ticket-export.ts components/src/compliance/types.ts components/src/types/index.ts
-```
-
-Ergebnis: Exitcode **0**, keine Diagnosen. Dieser zusätzliche Befehl setzt den lokalen Compiler voraus und gehört nicht zur unabhängigen öffentlichen Testvoraussetzung. `npm test` benötigt ausschließlich Node.
-
-## Integrität und Auswahl
-
-- Alle drei übernommenen Dateien wurden bytegleich mit der Quelle verglichen; SHA-256-Werte stehen in [PROVENANCE.json](../PROVENANCE.json).
-- Alle Markdown-Dateiverweise wurden lokal auf vorhandene Ziele geprüft. Private Quellreferenzen sind bewusst keine anklickbaren Links.
-- Das vollständige öffentliche Dateiinventar wurde auf unerwartete Dateien, Symlinks, absolute Benutzerpfade, verbreitete Secretmuster und Konfigurations-/Datenartefakte geprüft. Kein Muster-Scan beweist vollständige Geheimnisfreiheit.
-- Die 21 für die Einordnung erfassten Quellhashes und der Git-Status des privaten Projekts wurden nach der Vorbereitung unverändert bestätigt.
-- Whitespace-Prüfung mit `git diff --no-index --check /dev/null <Datei>` über jede öffentliche Datei; nötig, weil in einem neuen, nicht gestagten Repository `git diff --check` allein neue Dateien nicht erfasst.
-- Das Manifest erfasst alle öffentlichen Dateien außer sich selbst; Git-Metadaten sind ausgeschlossen. Prüfung:
-
-```bash
 shasum -a 256 -c MANIFEST.sha256
+git diff --check
 ```
 
-## Git- und Freigabegrenze
+12 Tests: acht unveränderte Charakterisierungstests des Originalauszugs und vier neue Screenshot-/Dokumentprüfungen. Die neuen Prüfungen prüfen drei PNG-Dateien mit 1440 Pixeln Breite, SHA-256 gegen Provenienz, README-Bildverweise, tatsächliche Demo-API-Ergebnisse, das vollständige Dateimanifest sowie lokale Links und deutsche Dokumentzeichen. Sie reproduzieren die private App nicht aus dem öffentlichen Showcase und beweisen keine Bildinhalte oder Compliance. Die Sichtung der Bilder erfolgte separat assistentengestützt.
 
-Eigenständig initialisiert auf `docs/initial-showcase`. Keine Commits, keine gestagten Dateien, keine Remotes und keine Veröffentlichung. Eine spätere Veröffentlichung benötigt Inhalts-/Rechtefreigabe und gesonderte Anweisung.
+Die neuen Prüfungen wurden vor Ergänzung der Provenienz und Dokumentation ausgeführt: drei erwartete Fehler wegen fehlender Screenshot-Metadaten, unvollständigem Manifest und alter Dokumentation. Nach Ergänzung bestehen alle zwölf Tests. Der ursprüngliche Codeauszug bleibt bytegleich zur privaten Quelle; seine acht Tests prüfen Exportfelder, Prioritäten, optionale Werte, Eingabeerhalt und Statuszählung. `done` zählt ohne Nachweisprüfung: kein Compliance-Score.
 
-## Was dieser Lauf nicht beweist
+## Tatsächlich ausgeführte App-Demo
 
-Keine vollständige Anwendungsausführung, Live-OAuth-/Connectorfunktion, Auth-/Mandantensicherheit, Datenbankmigration, Rechtskonformität, Penetrationstest, produktive Betriebsfähigkeit oder Kundenwirkung. Die statische Inspektion ist assistentengestützte technische Sichtung, keine unabhängige fachliche oder menschliche Freigabe.
+Siehe [Aufnahmeprotokoll](SCREENSHOTS.md) und [maschinenlesbaren Browserlauf](screenshots/capture-report.json).
+
+In der isolierten Kopie nach offen dokumentiertem Dependency-Patch: frisches `npm ci` und `CI=true NEXT_TELEMETRY_DISABLED=1 npm run release:gate` erfolgreich. Enthalten: 25 Security-Tests, frischer Audit mit null bekannten Befunden, 9 Core-Tests, sechs Lint-Tasks, vier Build-Tasks ohne Cachetreffer und 14 Chromium-Tests in Desktop-/schmalem Viewport. Core und beide Apps wurden tatsächlich gebaut. Warnungen: ESLint 9.39.5 nicht mehr unterstützt; Tailwind-TypeScript-Konfiguration meldet einen Package-Typ-Performancehinweis. Kein stilles Übergehen von Advisories.
+
+Wichtig: Der unveränderte private Quellstand verwendet Next.js 16.4.0. Dessen frischer Audit meldete ein kritisches betroffenes Paket; sein Release-Gate blockierte korrekt. Nur die isolierte Screenshot-Kopie wurde auf 16.4.3 gebracht. Der private Originalbaum bleibt unverändert und ist durch diesen Lauf nicht freigegeben.
+
+Der zusätzliche separate Browserlauf erzeugte 13 Maßnahmenvorschläge, 13 simulierte Tickets und einen Statuswechsel. Alle drei lokalen POST-Antworten: HTTP 200 und `mode: demo`. Keine Browserfehler oder externen Laufzeitanfragen. Bekannte Einschränkung: Maßnahmenstatus wird beim Reload zurückgesetzt, simulierte Ticketreferenzen bleiben erhalten. Eine Evidence-/Nachweisablage ist im gezeigten Dashboard nicht vorhanden.
+
+## Integrität und Veröffentlichung
+
+- Drei Originalauszüge unverändert; SHA-256 in [PROVENANCE.json](../PROVENANCE.json).
+- Neu aufgenommene PNGs mit synthetischen Daten, Laufbeleg, Screenshotdokumentation und Validatoren ausdrücklich kuratiert.
+- Keine private Git-Historie, Zugangskonfiguration oder Produktionsdaten kopiert. Der private Git-Status und alle 85 für den isolierten Lauf übernommenen Quelldateien wurden gegen ihre vorab erfassten Hashes geprüft.
+- Manifest deckt alle öffentlichen Dateien außer sich selbst ab. Git-Metadaten sind ausgeschlossen.
+- Lokale Markdown-Verweise, Dateiinventar und verbreitete Secretmuster werden vor Veröffentlichung geprüft. Ein Muster-Scan beweist keine vollständige Geheimnisfreiheit.
+- Der Eigentümer hat Implementierung und Veröffentlichung dieses bestehenden Showcases autorisiert. Nur der Showcase-Commit wird veröffentlicht, nicht die private Laufkopie. Remote-Blobvergleich erfolgt gegen den freigegebenen lokalen Commit.
+
+## Nicht bewiesen
+
+Keine Live-OAuth-/Connectorfunktion, Auth-/Mandantensicherheit, Datenbankmigration, fachliche oder rechtliche Richtigkeit, Penetrationstest, sichere Produktion oder Kundenwirkung. Eine bestandene lokale Demo ist keine Freigabe des privaten Produkts.

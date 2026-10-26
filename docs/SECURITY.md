@@ -2,9 +2,9 @@
 
 ## Geltungsbereich
 
-Dieses Repository enthält Dokumentation, Typdefinitionen, eine reine Export-/Aggregationsfunktion und synthetische Tests. Es betreibt keinen Server, verarbeitet keine echten HR-/Kundendaten und verbindet keine externen Systeme. Es ist kein Sicherheitsprodukt zum Installieren und kein Nachweis eines unabhängigen Security-Audits.
+Dieses Repository enthält Dokumentation, Typdefinitionen, eine reine Export-/Aggregationsfunktion, synthetische Tests und drei neu aufgenommene Demo-Screenshots. Es betreibt keinen Server, verarbeitet keine echten HR-/Kundendaten und verbindet keine externen Systeme. Es ist kein Sicherheitsprodukt zum Installieren und kein Nachweis eines unabhängigen Security-Audits.
 
-Die private Anwendung wurde für dieses Showcase statisch untersucht, nicht gestartet, penetriert oder als sicher freigegeben. Frühere Dependency-Auditwerte werden nicht als aktueller Befund ausgegeben.
+Der private Originalbaum blieb unverändert. Eine isolierte Kopie wurde ausschließlich mit synthetischen Daten lokal gestartet, nicht penetriert oder als sicher freigegeben. Frühere Dependency-Auditwerte werden nicht als aktueller Befund ausgegeben.
 
 ## Menschliche Entscheidungshoheit
 

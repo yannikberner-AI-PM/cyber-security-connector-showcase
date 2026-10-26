@@ -1,0 +1,174 @@
+{
+  "session": "cyber-screens",
+  "transport": "isolated Playwright Chromium context (Browser Use rejected loopback)",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "errors": [],
+  "blocked": [],
+  "postResponses": [
+    {
+      "path": "/api/onboarding/complete",
+      "status": 200,
+      "mode": "demo"
+    },
+    {
+      "path": "/api/tickets/create-all",
+      "status": 200,
+      "mode": "demo"
+    },
+    {
+      "path": "/api/webhooks/jira",
+      "status": 200,
+      "mode": "demo"
+    }
+  ],
+  "measureCount": 13,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/onboarding"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/75334fc536fdfffd-s.p.0l4a8qxfzwpm8.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/7c42b85337e0c4bb-s.p.012bmydply3go.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/916cd8a3bde3edf8-s.p.0oace-s_gkfks.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/d6c1ff7e86974212-s.p.40sczeszzbjw1.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/dd16c64b99082e83-s.p.0pki2uy9ztkxf.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/1a1e0-i4p47at.css"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/1x6obpmlu1_c2.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/1-nqmp1rl8kqt.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/3wbm-994r45kr.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/34goyxc2anvlg.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/0umf92h1sb77c.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/02c8g-4i0q6x-.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/2n_r7npx89-1d.js"
+    },
+    {
+      "method": "POST",
+      "path": "/api/onboarding/complete"
+    },
+    {
+      "method": "GET",
+      "path": "/dashboard"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/325e5mxfj07v6.js"
+    },
+    {
+      "method": "POST",
+      "path": "/api/tickets/create-all"
+    },
+    {
+      "method": "POST",
+      "path": "/api/webhooks/jira"
+    },
+    {
+      "method": "GET",
+      "path": "/dashboard"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/75334fc536fdfffd-s.p.0l4a8qxfzwpm8.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/7c42b85337e0c4bb-s.p.012bmydply3go.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/916cd8a3bde3edf8-s.p.0oace-s_gkfks.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/d6c1ff7e86974212-s.p.40sczeszzbjw1.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/dd16c64b99082e83-s.p.0pki2uy9ztkxf.woff2"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/1a1e0-i4p47at.css"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/1x6obpmlu1_c2.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/1-nqmp1rl8kqt.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/3wbm-994r45kr.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/34goyxc2anvlg.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/0umf92h1sb77c.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/325e5mxfj07v6.js"
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/chunks/2n_r7npx89-1d.js"
+    }
+  ],
+  "limits": [
+    "No evidence storage UI",
+    "Measure status resets on reload while simulated ticket status persists"
+  ]
+}
