@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "source_root": "../Cyber-Security-SaaS",
+  "source_identity": "Lotse (private research prototype; statically inspected)",
+  "public_scope": "Curated independent showcase; no private Git history or operating configuration.",
+  "copied_files": [
+    {
+      "path": "components/src/actions/ticket-export.ts",
+      "source": "packages/core-connector/src/actions/ticket-export.ts",
+      "sha256": "a8e89b5dabdcc21f5050784aa346c58815a6fbff1123b4405b9bef1681332a2f",
+      "unchanged": true
+    },
+    {
+      "path": "components/src/compliance/types.ts",
+      "source": "packages/core-connector/src/compliance/types.ts",
+      "sha256": "7df176a3052f687b092d55e0624b2206ca6412d6c0ce3c259129aed4488f6f44",
+      "unchanged": true
+    },
+    {
+      "path": "components/src/types/index.ts",
+      "source": "packages/core-connector/src/types/index.ts",
+      "sha256": "a4bf4ab9b3212745e464a6127feac6a7a70e45a12c2fd5e600b453ba15a4b089",
+      "unchanged": true
+    }
+  ],
+  "inspected_evidence": [
+    {
+      "source": "README.md",
+      "sha256": "fc6c7b497565bbbf6a065450b090e87555e61aac4af93c00921e2993ec145013"
+    },
+    {
+      "source": "apps/kmu-demo/src/app/api/assessment/run/route.ts",
+      "sha256": "6983613f7446f2441f41655857e15a9bfac83acc8d700602f538ab87d1579ebb"
+    },
+    {
+      "source": "apps/kmu-demo/src/app/api/onboarding/complete/route.ts",
+      "sha256": "0d7c4d24eadf60d16f4fe0642bd5d41d11c3a124c7f91042404468241b817f4b"
+    },
+    {
+      "source": "apps/kmu-demo/src/app/api/tickets/create-all/route.ts",
+      "sha256": "9d25b0e0a71cbfbef2868d4e751b79d58a4305f3c8ad3d617274e8e0c5cb6f8f"
+    },
+    {
+      "source": "apps/kmu-demo/src/app/dashboard/page.tsx",
+      "sha256": "eaf890e428247eb16b12e00b03b9b2bebe6d006e3cc662656caeec7a9ead4c8c"
+    },
+    {
+      "source": "apps/kmu-demo/src/app/onboarding/page.tsx",
+      "sha256": "6fc1fce336e0717c4898f27a8cd6cf964c707bdf55482f26bf9bc8a762464500"
+    },
+    {
+      "source": "apps/kmu-demo/src/lib/supabase.ts",
+      "sha256": "8a63120db3d7812fb31ef949d289fa3d1b1f0f3bf3f44c7589a876d88da081ab"
+    },
+    {
+      "source": "docs/product/CATALOG_AND_AI_POLICY.md",
+      "sha256": "0d35f7c50fdc258bfd232cfb13a29b7e9e9db0c00eb94588c9a81627298075cf"
+    },
+    {
+      "source": "docs/product/PRODUCT_BLUEPRINT.md",
+      "sha256": "b81e3e32c7b0db42246a8210f375ea56486a5e55de3e1bc814fb1c7c01b97f0c"
+    },
+    {
+      "source": "package.json",
+      "sha256": "b233692d1341cf367f40fa4f71b8c0a25310d010fb50f1e929d436f0f27b8055"
+    },
+    {
+      "source": "packages/core-connector/src/actions/ticket-export.ts",
+      "sha256": "a8e89b5dabdcc21f5050784aa346c58815a6fbff1123b4405b9bef1681332a2f"
+    },
+    {
+      "source": "packages/core-connector/src/compliance/assessment-engine.ts",
+      "sha256": "35d50032877588c26807e33a2ae6b2dda8891d9366b6db32306b4d9f849e96e4"
+    },
+    {
+      "source": "packages/core-connector/src/compliance/types.ts",
+      "sha256": "7df176a3052f687b092d55e0624b2206ca6412d6c0ce3c259129aed4488f6f44"
+    },
+    {
+      "source": "packages/core-connector/src/connectors/csv-import.ts",
+      "sha256": "4deda6ee402257974d6bc833f0c8b81ffc587608002b12519dae934ecdfaab05"
+    },
+    {
+      "source": "packages/core-connector/src/connectors/hubspot.ts",
+      "sha256": "6c3c5949ae7ab615d03ad088c614820ca905502985c239ec3455fefc158225af"
+    },
+    {
+      "source": "packages/core-connector/src/connectors/jira.ts",
+      "sha256": "1e6a9c5954a2163b847395daf1177edb0a8ae39ac6fb7619f76bdf3c30f508d2"
+    },
+    {
+      "source": "packages/core-connector/src/connectors/personio.ts",
+      "sha256": "000d397f39ce55fd3596e90ce4d4e64ff287684325fbdb9ad7dadd1cdf248524"
+    },
+    {
+      "source": "packages/core-connector/src/measures/multi-source-generator.ts",
+      "sha256": "6911b6508b0ba24c003be0b0ef6f50436a7f22420ceafd753a24a8f954bcf308"
+    },
+    {
+      "source": "packages/core-connector/src/reporting/report-model.ts",
+      "sha256": "90898c7830bf53885a4aeca77dc43bb7b68264db3c297e216b000d463e20a0ea"
+    },
+    {
+      "source": "packages/core-connector/src/types/index.ts",
+      "sha256": "a4bf4ab9b3212745e464a6127feac6a7a70e45a12c2fd5e600b453ba15a4b089"
+    },
+    {
+      "source": "supabase/migrations/003_compliance_product.sql",
+      "sha256": "fbce1f49972c91a60dba160c266abd6d9654bf6e88c609652b0a254b05abdc4e"
+    }
+  ],
+  "new_materials": "Showcase documentation, license notice, package metadata and synthetic characterization tests were newly authored; not copied from private operational documentation."
+}
