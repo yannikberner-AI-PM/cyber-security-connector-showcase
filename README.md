@@ -1,98 +1,100 @@
-# Cyber Security Connector: Forschungs-Showcase
+# Cyber Security Connector: research showcase
 
-**Vorhandene HR-, Qualitäts- und Onboarding-Daten in nachvollziehbare Maßnahmen, Aufgaben und Nachweise übersetzen.**
+**English** | [Deutsch](README.de.md)
 
-Der private Forschungsprototyp heißt im Quellcode **Lotse**. Er untersucht, wie kleine und mittlere Unternehmen und ihre Cyber-Security-Partner vorhandene Informationen für eine strukturierte Sicherheits-Arbeitsstrecke nutzen können: Welche Aufgaben fehlen, wer könnte sie bearbeiten und welche Hinweise müssen fachlich geprüft werden?
+**Turn existing HR, quality, and onboarding data into traceable measures, tasks, and evidence.**
 
-Dies ist eine **kuratierte technische Ansicht**, keine vollständige Anwendung, kein veröffentlichtes Produkt und kein einsatzbereites Compliance-System. Das Hauptprojekt bleibt privat. Dieses eigenständige Showcase wird mit Freigabe des Eigentümers öffentlich bereitgestellt; der vollständige Produktcode und seine Git-Historie bleiben privat.
+The private research prototype is called **Lotse** in the source code. It explores how small and medium-sized businesses and their cybersecurity partners can use existing information to prepare a structured security workflow: which tasks are missing, who could work on them, and which indications need expert review?
 
-## Produktidee und Verantwortung
+This is a **curated technical view**, not a complete application, a released product, or a deployment-ready compliance system. The main project remains private. This standalone showcase is made publicly available with the owner's approval; the complete product code and its Git history remain private.
+
+## Product idea and responsibility
 
 ```text
-Onboarding + HR/Organigramm + QM/Prozessdaten
+Onboarding + HR/org chart + quality/process data
                  ↓
-    normalisierte Datensätze mit Herkunft
+       normalised records with provenance
                  ↓
-   regelbasierte Vorschläge und Maßnahmen
+      rule-based suggestions and measures
                  ↓
-       fachliche Prüfung durch Menschen
+           human expert review
                  ↓
- optionale Tickets → Fortschritt → Nachweisprüfung
+ optional tickets → progress → evidence review
                  ↓
-    Management- und Auditdokumentation (Ziel)
+   management and audit documentation (target)
 ```
 
-Der Nutzen liegt nicht im automatischen Bescheinigen von Sicherheit, sondern im Vorbereiten einer überprüfbaren Arbeitsgrundlage. Ticketing ist optional; ein Maßnahmenplan kann bereits aus Onboarding-Antworten entstehen. Partner-CRM ist ein separater Intake-Pfad, keine Voraussetzung für den Maßnahmenplan.
+The value is not automatically certifying security, but preparing a reviewable basis for work. Ticketing is optional; onboarding answers alone can generate an action plan. Partner CRM is a separate intake path, not a prerequisite for the action plan.
 
-**Menschliche Freigabe ist eine Produktanforderung, noch kein durchgängig erzwungenes Sicherheitsmerkmal.** Positive Wirksamkeitsbestätigungen, Risikoakzeptanzen, Rechtsentscheidungen und der fachliche Abschluss einer Maßnahme müssen bei berechtigten Menschen bleiben. Die aktuelle Demo und die gezeigten Exportfunktionen erzwingen diese Grenze nicht vollständig.
+**Human approval is a product requirement, not yet a consistently enforced security feature.** Positive effectiveness confirmations, risk acceptance, legal decisions, and expert sign-off on measures must remain with authorised people. The current demo and the export functions shown here do not fully enforce that boundary.
 
-## So sieht die Arbeitsstrecke aus
+## What the workflow looks like
 
-Drei echte Browseraufnahmen der lokal gestarteten KMU-App, keine Mockups. **Alle Daten sind synthetisch; Personio und Jira sind simuliert.** Die isolierte Kopie erhält einen sichtbaren Demo-Hinweis und präzisierte Vorschlags-/Ticketlabels. Es gibt keine durchgängig erzwungene Fachfreigabe und keine geprüfte Nachweisablage.
+Three genuine browser captures of the locally running small-business app, not mockups. **All data is synthetic; Personio and Jira are simulated.** The isolated copy includes a visible demo notice and clarified suggestion/ticket labels. There is no consistently enforced expert approval or verified evidence repository. The application UI remains in German; English captions explain the workflow.
 
-### 1. Datenquellen statt Doppelpflege
+### 1. Use data sources instead of duplicating entry
 
-![Onboarding mit synthetischem Personio-Datensatz und optionalen Datenquellen](docs/screenshots/01-onboarding.png)
+![Onboarding with a synthetic Personio dataset and optional data sources](docs/screenshots/01-onboarding.png)
 
-Das Onboarding erfasst Branche und Größe. Hier hat der simulierte Personio-Adapter 13 synthetische Personen-/Abteilungseinträge eingelesen. Weitere Marketplace-Karten sind keine bestätigten Integrationen.
+Onboarding captures industry and company size. Here, the simulated Personio adapter imported 13 synthetic person/department entries. Other marketplace cards are not confirmed integrations.
 
-### 2. Maßnahmen zur fachlichen Prüfung vorbereiten
+### 2. Prepare measures for expert review
 
-![13 regelbasierte Maßnahmenvorschläge mit synthetischen Verantwortlichen](docs/screenshots/02-massnahmen.png)
+![13 rule-based measure suggestions with synthetic proposed owners](docs/screenshots/02-massnahmen.png)
 
-Aus Onboarding, HR und fünf CSV-Beispielprozessen entstehen 13 Vorschläge mit Priorität, möglichen Verantwortlichen und Prozesshinweisen. „Bereits vorhandener Prozess erkannt“ bedeutet einen heuristischen Treffer, nicht Wirksamkeit oder Compliance. Die Namen gehören zum eingebauten Demo-Datensatz.
+Onboarding, HR, and five CSV example processes produce 13 suggestions with priorities, possible owners, and process references. “Existing process detected” means a heuristic match, not effectiveness or compliance. The names belong to the built-in demo dataset.
 
-### 3. Aufgaben verfolgen, Nachweisgrenze sichtbar halten
+### 3. Track tasks and keep evidence limitations visible
 
-![Simulierte Jira-Aufgaben mit einem Statuswechsel und Hinweis auf fehlende Nachweisablage](docs/screenshots/03-aufgaben-nachweisgrenze.png)
+![Simulated Jira tasks with a status change and a notice about the missing evidence repository](docs/screenshots/03-aufgaben-nachweisgrenze.png)
 
-Die tatsächlichen lokalen Demo-API-Routen erzeugen simulierte Ticketreferenzen. Ein Klick auf Sync setzt eine Aufgabe auf „In Arbeit“. Die angezeigten 4 % sind nur die Statusformel, kein Sicherheitsgrad. **Eine Nachweis-/Evidence-Oberfläche ist in diesem KMU-Dashboard nicht implementiert**; deshalb zeigt das dritte Bild Aufgaben und die explizite Nachweisgrenze statt einer erfundenen Evidence-Ansicht.
+The actual local demo API routes generate simulated ticket references. Clicking Sync sets one task to “In progress”. The displayed 4% reflects only the status formula, not a security level. **An evidence interface is not implemented in this small-business dashboard**; the third image therefore shows tasks and the explicit evidence limitation rather than an invented evidence view.
 
-[Aufnahme, Isolation, Anpassungen und Grenzen](docs/SCREENSHOTS.md) · [Maschinenlesbarer Laufbeleg](docs/screenshots/capture-report.json)
+[Capture, isolation, modifications, and limitations, in German](docs/SCREENSHOTS.md) · [Machine-readable execution record](docs/screenshots/capture-report.json)
 
-## Was ist vorhanden, was ist geplant?
+## What exists, and what is planned?
 
-„Vorhanden“ bedeutet hier: im privaten Quellcode durch statische Inspektion identifiziert. Der öffentliche Codeauszug und eine isolierte lokale App-Demo mit synthetischen Daten wurden ausgeführt. Frühere Test- oder Auditangaben des privaten README werden nicht als aktuelle Ergebnisse übernommen.
+“Exists” means identified in the private source code through static inspection. The public code excerpt and an isolated local app demo with synthetic data were executed. Earlier test or audit statements in the private README are not reused as current results.
 
-| Bereich | Ehrliche Einordnung |
+| Area | Evidence and limitations |
 | --- | --- |
-| KMU- und Partneroberfläche | Next.js-/React-Demos vorhanden; KMU-Onboarding, Maßnahmen und simulierte Tickets lokal im Browser ausgeführt. Kein Deploymentnachweis. |
-| Maßnahmen aus mehreren Quellen | Regelbasierter Generator vorhanden: Onboarding erzeugt den Basisplan, HR ergänzt Owner-Vorschläge, QM ergänzt Prozesshinweise. Heuristiken ersetzen keine fachliche Prüfung. |
-| HR / Personio | Demo-Adapter liefert einen fest eingebauten Datensatz. Der untersuchte `pull`-Pfad ruft keine Personio-Live-API auf. |
-| QM / Prozessimport | Einfacher, semikolongetrennter CSV-Parser vorhanden. Kein vollständiger CSV-Standardparser, kein nativer XLSX-Import und kein Nachweis einer QM-Herstellerintegration. |
-| Partner-CRM / HubSpot | Demo-Kundenimport vorhanden; der Live-Pfad wirft ausdrücklich einen Fehler. |
-| Ticketing / Jira | Mock-Tickets und simulierte Statusänderungen vorhanden; Live-Codepfade sind kein Nachweis eines funktionierenden, autorisierten End-to-End-Connectors. |
-| Weitere Ticketziele | Namen im Export-Datenmodell, keine bestätigten Azure-DevOps-, Asana- oder ServiceNow-Integrationen. |
-| Assessment / Nachweise | Regelbasierte Vorbefüllung mit Quellenreferenzen, Konfidenz und Review-Flag vorhanden. Keine geprüfte Nachweisablage oder unabhängige Wirksamkeitsprüfung. |
-| Berichte / Auditpakete | Datenmodelle und Builder vorhanden; kein fertiger PDF-/DOCX-/XLSX-Renderer, kein Audit- oder Zertifizierungsnachweis. |
-| Datenbank | Supabase-/Postgres-Migrationen vorhanden; Migration ist kein Nachweis für angewandtes Schema, Mandantentrennung oder produktive Persistenz. |
-| KI | KI-Unterstützung ist ein möglicher Ausbau. Der hier beschriebene Maßnahmen-/Assessment-Pfad arbeitet regelbasiert; keine validierte KI-Produktfunktion behauptet. |
-| Betrieb / Sicherheit | Authentisierung, Autorisierung, durchgängige Review-Gates, sichere Tokenverwaltung, RLS und Betriebsprozesse sind vor realen Daten gesondert umzusetzen bzw. zu prüfen. |
+| Small-business and partner interfaces | Next.js/React demos exist; small-business onboarding, measures, and simulated tickets were exercised locally in the browser. No deployment evidence. |
+| Measures from multiple sources | A rule-based generator exists: onboarding creates the base plan, HR adds proposed owners, and quality-management data adds process references. Heuristics do not replace expert review. |
+| HR / Personio | Demo adapter supplies a built-in dataset. The inspected `pull` path does not call the live Personio API. |
+| Quality management / process import | A simple semicolon-separated CSV parser exists. Not a fully standards-compliant CSV parser, no native XLSX import, and no evidence of a quality-management vendor integration. |
+| Partner CRM / HubSpot | Demo customer import exists; the live path explicitly throws an error. |
+| Ticketing / Jira | Mock tickets and simulated status changes exist; live code paths do not demonstrate a working, authorised end-to-end connector. |
+| Other ticket destinations | Names in the export data model, not confirmed Azure DevOps, Asana, or ServiceNow integrations. |
+| Assessment / evidence | Rule-based prefilling with source references, confidence, and a review flag exists. No verified evidence repository or independent effectiveness assessment. |
+| Reports / audit packages | Data models and builders exist; no finished PDF/DOCX/XLSX renderer, audit evidence, or certification evidence. |
+| Database | Supabase/Postgres migrations exist; a migration does not demonstrate an applied schema, tenant isolation, or production persistence. |
+| AI | AI assistance is a possible extension. The measures/assessment path described here is rule-based; no validated AI product feature is claimed. |
+| Operations / security | Authentication, authorisation, end-to-end review gates, secure token management, RLS, and operational processes must be implemented or separately verified before using real data. |
 
-Details und genaue Quellbelege: [Implementierungsstand](docs/STATUS.md), [Architektur](docs/ARCHITECTURE.md) und [Sicherheitsmodell](docs/SECURITY.md).
+Details and precise source evidence, in German: [implementation status](docs/STATUS.md), [architecture](docs/ARCHITECTURE.md), and [security model](docs/SECURITY.md).
 
-## Kleiner unveränderter Originalauszug
+## Small, unchanged original excerpt
 
-Enthalten sind eine reine TypeScript-Datei für **Ticket-Exportdatensätze und Fortschrittsberechnung** sowie ihre zwei Typabhängigkeiten. Sie illustrieren die Trennung zwischen kanonischer Maßnahme und austauschbarem Ticketziel. Keine Funktion in diesem Auszug ruft ein Kundensystem auf.
+Included are a pure TypeScript file for **ticket-export records and progress calculation**, plus its two type dependencies. They illustrate the separation between a canonical measure and interchangeable ticket destinations. No function in this excerpt calls a customer system.
 
-Mit Node.js ab 22.18, ohne externe Pakete, Zugangsdaten oder private Quelldateien:
+Requires Node.js 22.18 or later, with no external packages, credentials, or private source files:
 
 ```bash
 npm test
 shasum -a 256 -c MANIFEST.sha256
 ```
 
-Die acht Tests nutzen ausschließlich neu erstellte synthetische Maßnahmen. Sie prüfen Exportfelder, Prioritäten, leere und optionale Werte, Eingabeerhalt und Fortschrittszählung. Ein Test dokumentiert ausdrücklich die Grenze: `done` zählt auch ohne geprüften Nachweis als erledigt. Der berechnete Prozentwert ist **kein Sicherheits- oder Compliance-Score**.
+The eight excerpt tests use only newly created synthetic measures. They check export fields, priorities, empty and optional values, input preservation, and progress counting. One test explicitly documents the limitation: `done` counts as completed even without verified evidence. The calculated percentage is **not a security or compliance score**.
 
-- [Komponenten und Grenzen](components/README.md)
-- [Prüfumfang und tatsächliche Ergebnisse](docs/VERIFICATION.md)
-- [Relative Herkunft und SHA-256-Hashes](PROVENANCE.json)
-- [Dateimanifest](MANIFEST.sha256)
+- [Components and limitations, in German](components/README.md)
+- [Validation scope and actual results, in German](docs/VERIFICATION.md)
+- [Relative provenance and SHA-256 hashes](PROVENANCE.json)
+- [File manifest](MANIFEST.sha256)
 
-## Nicht zugesagt
+## Not promised
 
-Keine automatische NIS-2-/BSIG-Konformität, ISO-Zertifizierung, Rechtsberatung, bestätigte Betroffenheitsprüfung, Kundenwirkung, Zeitersparnis, Produktionsreife, sichere Mehrmandantenfähigkeit oder erfolgreiche Live-Integration. NIS-2 ist hier ein Forschungs- und Modellierungskontext, kein fachlich freigegebener Compliance-Katalog. Es werden keine Pilotkennzahlen als erreichte Ergebnisse dargestellt.
+No automatic NIS-2/BSIG compliance, ISO certification, legal advice, confirmed applicability assessment, customer impact, time savings, production readiness, secure multitenancy, or successful live integration. NIS-2 is a research and modelling context here, not an expert-approved compliance catalogue. No pilot metrics are presented as achieved outcomes.
 
-## Rechte und Veröffentlichungsgrenze
+## Rights and publication boundary
 
-Texte und ausgewählte Originalauszüge bleiben **proprietär**; siehe [LICENSE](LICENSE). Öffentlich einsehbar bedeutet nicht Open Source. Dieses eigenständige Repository enthält keine private Git-Historie, Betriebs- oder Zugangskonfiguration, Kundendaten, internen Marktstudien oder fremden Normtexte. Die drei neu aufgenommenen App-Bilder zeigen ausschließlich den eingebauten synthetischen HR-/QM-Datensatz und simulierte Tickets. Keine Bestandsdaten, Zugangsdaten oder privaten Betriebsdateien werden übernommen.
+Text and selected original excerpts remain **proprietary**; see [LICENSE](LICENSE). Publicly viewable does not mean open source. This standalone repository contains no private Git history, operational or access configuration, customer data, internal market studies, or third-party standards text. The three newly captured app images show only the built-in synthetic HR/quality-management dataset and simulated tickets. No existing operational data, credentials, or private operational files are included.

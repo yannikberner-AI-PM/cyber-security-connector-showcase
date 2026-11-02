@@ -45,8 +45,8 @@ test('manifest covers every public file and verifies exact bytes', () => {
   });
   assert.deepEqual(paths.sort(),walk('').filter(p => p!=='MANIFEST.sha256').sort());
 });
-test('German documentation avoids long dash punctuation and local file links resolve', () => {
-  for(const file of ['README.md','docs/SCREENSHOTS.md','docs/VERIFICATION.md']) {
+test('bilingual documentation avoids long dash punctuation and local file links resolve', () => {
+  for(const file of ['README.md','README.de.md','docs/SCREENSHOTS.md','docs/VERIFICATION.md']) {
     const text=read(file).toString(); assert.ok(!/[\u2013\u2014]/.test(text),file);
     for(const m of text.matchAll(/\]\(([^)]+)\)/g)) {
       if(/^(https?:|#)/.test(m[1])) continue;
