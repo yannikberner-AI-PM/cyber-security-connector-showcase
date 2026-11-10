@@ -30,3 +30,14 @@ test('English README identifies untranslated UI and German supporting documentat
   assert.ok(text.includes('in German'));
   assert.ok(!/[\u2013\u2014]/.test(text));
 });
+
+test('both languages separate direct SaaS goals from the incomplete prototype', () => {
+  const english = read('README.md');
+  const german = read('README.de.md');
+  for (const phrase of ['companies can use directly', 'not yet a complete implemented workflow', 'required internal executive reviews', 'not a committed or implemented module', 'Reading a report does not constitute training completion']) {
+    assert.ok(english.includes(phrase), phrase);
+  }
+  for (const phrase of ['direkt im Unternehmen nutzbares SaaS', 'noch kein vollständig implementierter Ablauf', 'verbindliche interne Executive-Reviews', 'kein beschlossenes oder implementiertes Modul', 'Reportlesen ersetzt keinen Schulungsabschluss']) {
+    assert.ok(german.includes(phrase), phrase);
+  }
+});

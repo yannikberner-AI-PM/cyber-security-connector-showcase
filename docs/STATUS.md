@@ -1,5 +1,13 @@
 # Implementierungsstand und Belege
 
+## Produktziel und Implementierungsgrenze
+
+Lotse ist als direkt im Unternehmen nutzbares SaaS konzipiert. Unternehmensunterlagen sollen zu einer nachvollziehbaren NIS-2-Bestandsaufnahme, geführten Entscheidungen und Maßnahmen, Umsetzungsnachverfolgung und verbindlichen internen Executive-Reviews führen. Partner und externe Ticket-Systeme sind optional.
+
+Das ist das Produktziel, kein bereits vollständig ausgelieferter Ablauf. Insbesondere Dokumentenauswertung, geführte Bearbeitung, Erinnerungen, Nachweisfreigabe und Executive-Kenntnisnahme/-Freigaben sind noch Implementierungsarbeit. Der vorhandene Report-Builder ersetzt keinen solchen Workflow. Managementbericht und Auditpaket sollen denselben freigegebenen Datenstand verwenden.
+
+Executive-Schulungen sind eine mögliche Ergänzung, kein beschlossenes Modul. Reportlesen ersetzt keine Schulung; gesetzliche Schulungs- und Leitungspflichten sind separat fachlich zu prüfen. Verbindliche interne Reviews behaupten keine gesetzlich vorgegebene Reportform oder Frequenz.
+
 ## Leseregel
 
 Diese Einordnung beruht auf statischer Inspektion des privaten Lotse-Quellstands bei der lokalen Vorbereitung. Sie trennt **Code vorhanden**, **Demo**, **Datenmodell**, **Ziel** und **hier ausgeführt**. Quellpfade in dieser Tabelle sind relative Referenzen in das private Projekt und absichtlich keine öffentlichen Links. Hashes des untersuchten Stands stehen in [PROVENANCE.json](../PROVENANCE.json). Der private README ist Kontext, nicht alleiniger Funktionsnachweis.

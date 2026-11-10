@@ -1,30 +1,33 @@
-# Cyber Security Connector: research showcase
+# Lotse: research showcase
 
 **English** | [Deutsch](README.de.md)
 
-**Turn existing HR, quality, and onboarding data into traceable measures, tasks, and evidence.**
+**From company documents to a traceable assessment, guided decisions, tracked measures, and executive reviews.**
 
-The private research prototype is called **Lotse** in the source code. It explores how small and medium-sized businesses and their cybersecurity partners can use existing information to prepare a structured security workflow: which tasks are missing, who could work on them, and which indications need expert review?
+**Lotse** is a private research prototype for a SaaS product that companies can use directly. It is designed to turn existing company documents into a traceable NIS2 assessment and guide responsible people through open decisions and measures. Implementation tracking and required internal executive reviews belong to the core product goal. Consulting partners can support the work, but are not required to buy, introduce, or use Lotse.
 
 This is a **curated technical view**, not a complete application, a released product, or a deployment-ready compliance system. The main project remains private. This standalone showcase is made publicly available with the owner's approval; the complete product code and its Git history remain private.
 
 ## Product idea and responsibility
 
 ```text
-Onboarding + HR/org chart + quality/process data
+Target workflow, not fully implemented:
+Existing company documents + optional connected data
                  ↓
-       normalised records with provenance
+       traceable assessment with sources and gaps
                  ↓
-      rule-based suggestions and measures
+      human review and assigned decisions/measures
                  ↓
-           human expert review
+           guided work and implementation tracking
                  ↓
- optional tickets → progress → evidence review
+ executive report → acknowledgement and approvals
                  ↓
-   management and audit documentation (target)
+    audit package from the same approved data
 ```
 
-The value is not automatically certifying security, but preparing a reviewable basis for work. Ticketing is optional; onboarding answers alone can generate an action plan. Partner CRM is a separate intake path, not a prerequisite for the action plan.
+The current demos cover parts of that goal using onboarding, HR and process data, rule-based suggestions, and simulated tickets. Document analysis, guided decisions, reminders, evidence-based completion, and executive acknowledgement/approval are not yet a complete implemented workflow. Ticketing is optional; onboarding answers alone can generate an action plan. Partner CRM is a separate optional intake path, not the primary product model.
+
+Required executive reports mean an internal review workflow with a named recipient, agreed review date, acknowledgement, and required approvals, not a claim of a legally prescribed report format or frequency. Executive training is a possible addition, not a committed or implemented module. Reading a report does not constitute training completion.
 
 **Human approval is a product requirement, not yet a consistently enforced security feature.** Positive effectiveness confirmations, risk acceptance, legal decisions, and expert sign-off on measures must remain with authorised people. The current demo and the export functions shown here do not fully enforce that boundary.
 

@@ -1,30 +1,33 @@
-# Cyber Security Connector: Forschungs-Showcase
+# Lotse: Forschungs-Showcase
 
 [English](README.md) | **Deutsch**
 
-**Vorhandene HR-, Qualitäts- und Onboarding-Daten in nachvollziehbare Maßnahmen, Aufgaben und Nachweise übersetzen.**
+**Von Unternehmensunterlagen zu nachvollziehbarer Bestandsaufnahme, geführten Entscheidungen, nachverfolgten Maßnahmen und Executive-Reviews.**
 
-Der private Forschungsprototyp heißt im Quellcode **Lotse**. Er untersucht, wie kleine und mittlere Unternehmen und ihre Cyber-Security-Partner vorhandene Informationen für eine strukturierte Sicherheits-Arbeitsstrecke nutzen können: Welche Aufgaben fehlen, wer könnte sie bearbeiten und welche Hinweise müssen fachlich geprüft werden?
+**Lotse** ist ein privater Forschungsprototyp für ein direkt im Unternehmen nutzbares SaaS. Vorhandene Unternehmensunterlagen sollen eine nachvollziehbare NIS-2-Bestandsaufnahme vorbereiten und zuständige Personen durch offene Entscheidungen und Maßnahmen führen. Umsetzungsnachverfolgung und verbindliche interne Executive-Reviews gehören zum Produktkern. Beratungspartner können unterstützen, sind aber keine Voraussetzung für Kauf, Einführung oder Nutzung.
 
 Dies ist eine **kuratierte technische Ansicht**, keine vollständige Anwendung, kein veröffentlichtes Produkt und kein einsatzbereites Compliance-System. Das Hauptprojekt bleibt privat. Dieses eigenständige Showcase wird mit Freigabe des Eigentümers öffentlich bereitgestellt; der vollständige Produktcode und seine Git-Historie bleiben privat.
 
 ## Produktidee und Verantwortung
 
 ```text
-Onboarding + HR/Organigramm + QM/Prozessdaten
+Zielablauf, noch nicht vollständig implementiert:
+Unternehmensunterlagen + optionale angebundene Daten
                  ↓
-    normalisierte Datensätze mit Herkunft
+    Bestandsaufnahme mit Quellen und offenen Punkten
                  ↓
-   regelbasierte Vorschläge und Maßnahmen
+   Fachprüfung und zugewiesene Entscheidungen/Maßnahmen
                  ↓
-       fachliche Prüfung durch Menschen
+       geführte Bearbeitung und Nachverfolgung
                  ↓
- optionale Tickets → Fortschritt → Nachweisprüfung
+ Executive-Report → Kenntnisnahme und Freigaben
                  ↓
-    Management- und Auditdokumentation (Ziel)
+    Auditpaket aus demselben freigegebenen Stand
 ```
 
-Der Nutzen liegt nicht im automatischen Bescheinigen von Sicherheit, sondern im Vorbereiten einer überprüfbaren Arbeitsgrundlage. Ticketing ist optional; ein Maßnahmenplan kann bereits aus Onboarding-Antworten entstehen. Partner-CRM ist ein separater Intake-Pfad, keine Voraussetzung für den Maßnahmenplan.
+Die aktuellen Demos zeigen Teilstrecken dieses Ziels mit Onboarding, HR-/Prozessdaten, regelbasierten Vorschlägen und simulierten Tickets. Dokumentenauswertung, geführte Entscheidungen, Erinnerungen, nachweisbasierter Abschluss und Executive-Kenntnisnahme/-Freigaben sind noch kein vollständig implementierter Ablauf. Ticketing ist optional; ein Maßnahmenplan kann bereits aus Onboarding-Antworten entstehen. Partner-CRM ist ein separater optionaler Intake-Pfad, nicht das primäre Produktmodell.
+
+Verbindliche Executive-Reports bezeichnen einen internen Reviewworkflow mit benanntem Empfänger, vereinbartem Reviewtermin, Kenntnisnahme und erforderlichen Freigaben, keine gesetzlich vorgegebene Reportform oder Frequenz. Executive-Schulungen sind eine mögliche Ergänzung, kein beschlossenes oder implementiertes Modul. Reportlesen ersetzt keinen Schulungsabschluss.
 
 **Menschliche Freigabe ist eine Produktanforderung, noch kein durchgängig erzwungenes Sicherheitsmerkmal.** Positive Wirksamkeitsbestätigungen, Risikoakzeptanzen, Rechtsentscheidungen und der fachliche Abschluss einer Maßnahme müssen bei berechtigten Menschen bleiben. Die aktuelle Demo und die gezeigten Exportfunktionen erzwingen diese Grenze nicht vollständig.
 
